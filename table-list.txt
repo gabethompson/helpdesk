@@ -1,0 +1,35 @@
+assignments:
+	assocuser int
+	assocticket int
+	delkey int auto_increment primary key
+
+logs:
+	who int
+	what string
+	when datetime
+	id int auto_increment primary key
+
+relateds:
+	thisticket int
+	relticket int
+	reldelkey int auto_increment primary key
+
+tickets:
+	ticketid int auto_increment primary key
+	ticketname string
+	description string
+	status int
+	assigned bool (as tinyint)
+	comments string
+	notes string
+	tags string
+	priority int
+	timing int
+	timestamp datetime
+	lastchange datetime
+
+users:
+	idusers int auto_increment primary key
+	username string
+	password string
+	role int
